@@ -44,12 +44,12 @@
     },
     {
       "id": "710d10fd-135e-4e42-b04c-8db0b6d17a56",
-      "no": "ProblemNo",
+      "no": "CF1932A",
       "weight": 0,
-      "hidden": false,
-      "url": "#",
-      "tags": "",
-      "memo": "",
+      "hidden": true,
+      "url": "https://codeforces.com/problemset/problem/1932/A",
+      "tags": "DP，树",
+      "memo": "请在这里写备注",
       "difficulty": 4,
       "p1SubmissionUrl": "#",
       "p2SubmissionUrl": "#",
@@ -69,6 +69,20 @@
       "p2SubmissionUrl": "#",
       "p3SubmissionUrl": "#",
       "date": "2022-09-21T14:55:35.461Z"
+    },
+    {
+      "id": "a7f55584-e1ec-413a-a6ea-be777ec831c2",
+      "no": "CF1202B",
+      "weight": 0,
+      "hidden": false,
+      "url": "https://codeforces.com/problemset/problem/1202/B",
+      "tags": "动态规划，状态压缩",
+      "memo": "需要进阶技巧",
+      "difficulty": 4,
+      "p1SubmissionUrl": "",
+      "p2SubmissionUrl": "",
+      "p3SubmissionUrl": "",
+      "date": "2022-09-21T15:32:54.562Z"
     }
   ]
 }
