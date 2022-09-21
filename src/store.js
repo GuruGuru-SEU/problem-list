@@ -26,27 +26,41 @@ class Store {
     this.list = new ref([])
     this.filter = new ref(filter.hide)
   }
-  async applyFilter() {
-    await this.fetchProblems()
-    console.log('apply filter')
-    console.log(this.list.value)
-    this.list.value = this.list.value.filter(this.filter.value)
-    console.log(this.list.value)
-  }
   getFilter() {
     return this.filter.value
   }
   async fetchProblems() {
-    const response = await axios.get(`${SERVER_URL}/problems`)
+    this.list.value = []
+    const response = await axios.get(
+      `${SERVER_URL}/problems?_sort=date&_order=desc`
+    )
     this.list.value = response.data
   }
-  addProblem() {
+  async sortByDate() {
+    this.list.value = []
+    const response = await axios.get(
+      `${SERVER_URL}/problems?_sort=date&_order=desc`
+    )
+    this.list.value = response.data
+  }
+  async sortByNo() {
+    this.list.value = []
+    const response = await axios.get(
+      `${SERVER_URL}/problems?_sort=no&_order=aesc`
+    )
+    this.list.value = response.data
+  }
+  async addProblem() {
     const problem = createProblem()
-    axios.post(`${SERVER_URL}/problems`, problem)
-    this.list.value.unshift(problem)
+    await axios.post(`${SERVER_URL}/problems`, problem)
+    this.fetchProblems()
   }
   getProblem(id) {
     return this.list.value.find((item) => item.id === id)
+  }
+  async removeProblem(id) {
+    await axios.delete(`${SERVER_URL}/problems/${id}`)
+    this.fetchProblems()
   }
 }
 
