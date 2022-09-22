@@ -66,6 +66,4 @@ class Store {
 
 const store = new Store()
 
-await store.fetchProblems()
-
 export default store

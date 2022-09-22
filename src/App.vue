@@ -3,7 +3,6 @@
   import {
     NSpace,
     NLayout,
-    NLayoutHeader,
     NLayoutContent,
     NCard,
     NButtonGroup,
@@ -13,6 +12,8 @@
   import { AddOutline } from '@vicons/ionicons5'
   import ProblemCard from './components/ProblemCard.vue'
   import store from './store'
+
+  store.fetchProblems()
 
   function handleSortByDate() {
     store.sortByDate()
@@ -47,7 +48,7 @@
               <div
                 style="font-size: 1.5em; margin-bottom: 10px; font-weight: bold"
               >
-                GuruGuru Problem List
+                GuruGuru Problem List - Support Codeforces & Atcoder format!
               </div>
               <n-space justify="space-between">
                 <n-space>

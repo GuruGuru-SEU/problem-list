@@ -1,1 +1,1 @@
-export const SERVER_URL = 'http://18.234.185.246:8888/api'
+export const SERVER_URL = 'http://39.101.74.0:8080/api'

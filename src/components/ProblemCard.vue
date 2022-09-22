@@ -237,6 +237,7 @@
       <n-form inline>
         <n-form-item size="small" label="难度">
           <n-rate
+            allow-half
             v-model:value="problem.difficulty"
             @click="onChangeDifficulty"
           />
